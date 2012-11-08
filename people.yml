@@ -1,0 +1,37 @@
+# Each person has a list of people they are not willing to give gifts to
+# match.py will generate a match for everyone on this list and make sure
+#     that no one gets their willNotGive people as giftees
+Anna:
+    willNotGive: [Ryan, Rob, Tien]
+Matt:
+    willNotGive: []
+David:
+    willNotGive: [Krissy]
+Ryan:
+    willNotGive: [Tien, Dylan, Krissy, Melisande]
+Jake:
+    willNotGive: [Tien, Dylan, Krissy]
+Xavier:
+    willNotGive: []
+Ben:
+    willNotGive: [Alyssa, Allison, Tien, Dylan, Krissy, Jenny, Melisande]
+Rob:
+    willNotGive: [Alyssa, Allison, Tien, Dylan, Krissy, Jenny]
+Alex:
+    willNotGive: []
+Carver:
+    willNotGive: []
+Alyssa:
+    willNotGive: []
+Allison:
+    willNotGive: []
+Tien:
+    willNotGive: [Xavier, Ben, Rob, Carver, Ryan, Jake]
+Dylan:
+    willNotGive: [Xavier, Ben, Rob, Carver, Ryan, Jake]
+Krissy:
+    willNotGive: [David, Ryan, Jake, Ben, Rob]
+Jenny:
+    willNotGive: [Ryan, Rob]
+Melisande:
+    willNotGive: []
