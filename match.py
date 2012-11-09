@@ -29,7 +29,7 @@ while noGifterYet != []:
 			naughtyOrNiceDict = {}
 
 for person in people:
-	print person, 'is giving a gift to', naughtyOrNiceDict[person]
+	print person, 'is giving a gift to', naughtyOrNiceDict[person] + '.'
 
 if numTries == 1:
 	tryPlural = ' try.'
