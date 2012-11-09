@@ -22,7 +22,7 @@ while noGifterYet != []:
 			noGifterYet.remove(recipient)
 			naughtyOrNiceDict[person] = recipient
 		except IndexError:
-			print 'Ran out of people. Restarting...'
+			# Ran out of people. Restarting...
 			noGifterYet = people[:]
 			naughtyOrNiceDict = {}
 
