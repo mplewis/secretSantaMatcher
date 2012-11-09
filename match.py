@@ -1,11 +1,13 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import random
-
 import yaml
+
 with open('people.yml', 'r') as peopleData:
 	peopleData = yaml.load(peopleData)
 
 people = sorted(peopleData.keys())
-	
+
 random.seed()
 noGifterYet = people[:]
 numTries = 1
@@ -31,9 +33,28 @@ while noGifterYet != []:
 for person in people:
 	print person + ' is giving a gift to ' + naughtyOrNiceDict[person] + '.'
 
+print ''
+
+notMentionedYet = people[:]
+numCircles = 0
+while notMentionedYet != []:
+	numCircles += 1
+	person = notMentionedYet[0]
+	while person in notMentionedYet:
+		notMentionedYet.remove(person)
+		print person, '\xE2\x86\x92 ', # right-pointing arrow: →; http://unix.stackexchange.com/a/25907
+		person = naughtyOrNiceDict[person]
+	print person + '\n'
+
+if numCircles == 1:
+	circlePlural = ' circle.'
+else:
+	circlePlural = ' circles.'
+
 if numTries == 1:
 	tryPlural = ' try.'
 else:
 	tryPlural = ' tries.'
 
-print '\nDone after ' + str(numTries) + tryPlural
+print str(numCircles) + circlePlural
+print 'Done after ' + str(numTries) + tryPlural
